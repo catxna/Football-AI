@@ -1,0 +1,12 @@
+# Ignore contents of these folders but keep the folders themselves
+ByteTrack/*
+!ByteTrack/.gitkeep
+
+fast-reid/*
+!fast-reid/.gitkeep
+
+models/*
+!models/.gitkeep
+
+output_vids/*
+!output_vids/.gitkeep
