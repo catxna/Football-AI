@@ -1,0 +1,3 @@
+Arguments in order of: args.track_thresh, args.match_thresh, args.track_buffer, conf 
+
+football_vid1 - 0.3, 0.95, 120, 0.1. Good player ID and detection including partial occlusion. Bad ball detection.

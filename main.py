@@ -23,7 +23,7 @@ def get_next_filename(base_name, directory):
 
 def main():
     # Input video
-    input_path = 'input_vids/pro_short.mp4'
+    input_path = 'input_vids/pro_short3.mp4'
     cap = cv2.VideoCapture(input_path)
     if not cap.isOpened():
         print(f"Error: Could not open video {input_path}")

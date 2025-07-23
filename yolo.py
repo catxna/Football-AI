@@ -30,10 +30,10 @@ def draw_custom_box(image, bbox, label, color=(0, 255, 0), thickness=2, alpha=0.
     cv2.putText(image, label, (x1 + 2, label_y2 - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
 
 # Run YOLO inference on a video
-results = model.predict('input_vids/football_vid.mp4', save=False)
+results = model.predict('input_vids/pro_short3.mp4', save=False)
 
 # Open the video
-cap = cv2.VideoCapture('input_vids/football_vid.mp4')
+cap = cv2.VideoCapture('input_vids/pro_short3.mp4')
 
 # Get video properties
 fps = int(cap.get(cv2.CAP_PROP_FPS))
@@ -57,9 +57,9 @@ while cap.isOpened():
         cls = int(box.cls[0])  # Make sure it's an integer
         confidence = box.conf[0]
 
-        if model.names[cls].lower() == "ball":  # Only proceed if the object is "Ball"
-            label = f"{model.names[cls]} {confidence:.2f}"
-            draw_custom_box(frame, bbox, label)
+        # if model.names[cls].lower() == "ball":  # Only proceed if the object is "Ball"
+        label = f"{model.names[cls]} {confidence:.2f}"
+        draw_custom_box(frame, bbox, label)
 
 
     # Write the processed frame to the output video
